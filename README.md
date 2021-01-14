@@ -10,8 +10,8 @@ import NonReactivity from 'vue-nonreactivity-decorator'
 
 @Component
 class YourComponent extends Vue {
-    @NonReactivity
-    private yourProperty: string = 'Hello, world'
+    @NonReactivity('Hello, World!')
+    private yourProperty!: string
 }
 ```
 

@@ -1,4 +1,4 @@
-import { Component } from 'vue'
+import Vue from 'vue'
 
 const NON_REACTIVITY: WeakMap<Vue, Map<string, any>> = new WeakMap
 
@@ -17,13 +17,18 @@ function getNonReactivity(component: Vue, key: string): any {
     return ensureMap(component).get(key)
 }
 
-export function NonReactivity(target: Vue, property: string): void {
-    Object.defineProperty(target, property, {
-        get() {
-            return getNonReactivity(target, property)
-        },
-        set(v: any) {
-            setNonReactivity(target, property, v)
-        }
-    })
+export default function NonReactivity(value: any) {
+    return function(target: Vue, property: string) {
+
+        setNonReactivity(target, property, value)
+
+        Object.defineProperty(target, property, {
+            get() {
+                return getNonReactivity(target, property)
+            },
+            set(v: any) {
+                setNonReactivity(target, property, v)
+            }
+        })
+    }
 }
