@@ -14,3 +14,8 @@ class YourComponent extends Vue {
     private yourProperty: string = 'Hello, world'
 }
 ```
+
+## Install
+```
+npm i vue-nonreactivity-decorator
+```
