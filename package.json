@@ -1,7 +1,7 @@
 {
   "name": "vue-nonreactivity-decorator",
-  "version": "1.0.0",
-  "description": "non reactivity property decorator for vue-class-component",
+  "version": "1.0.1",
+  "description": "Non reactivity property decorator for vue-class-component",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +12,25 @@
   "dependencies": {
     "vue": "^2.6.12"
   },
+  "homepage": "https://github.com/izure1/vue-nonreactivity-decorator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/izure1/vue-nonreactivity-decorator"
+  },
+  "bugs": {
+      "url": "https://github.com/izure1/vue-nonreactivity-decorator/issues",
+      "email": "admin@izure.org"
+  },
+  "keywords": [
+      "vue",
+      "vue-property-decorator",
+      "vue-class-component",
+      "reactive",
+      "reactivity",
+      "non reactive",
+      "non reactivity",
+      "decorator"
+  ],
   "devDependencies": {
     "typescript": "^4.1.3"
   }
