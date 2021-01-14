@@ -17,7 +17,7 @@ function getNonReactivity(component: Vue, key: string): any {
     return ensureMap(component).get(key)
 }
 
-export default function NonReactivity(target: Vue, property: string): void {
+export function NonReactivity(target: Vue, property: string): void {
     Object.defineProperty(target, property, {
         get() {
             return getNonReactivity(target, property)
